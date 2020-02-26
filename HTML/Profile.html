@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+
+        <p class="fullName"></p>
+        <p class="Email"></p>
+        <p class="Password"></p>
+
+        <button onClick="getDetails()">Click me</button>
+        
+    </div>
+
+
+    <script>
+        function getDetails(){
+            var fullName = localStorage.getItem('fullName');
+            var email = localStorage.getItem('email');
+            var password = localStorage.getItem('password');
+
+
+            var paragraphFullName = document.querySelector(".fullName");
+            var paragraphEmail = document.querySelector(".Email");
+            var paragraphPassword = document.querySelector(".Password");
+
+
+            paragraphFullName.textContent = fullName;
+            paragraphEmail.textContent = email;
+            paragraphPassword.textContent = password;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Authentication</title>
+
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Sign up</h1>
+
+        <div class="form">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input id="fullName" type="text" placeholder="Enter your fullname here" />
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input id="email" type="email" placeholder="Enter your email here" />
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input id="password" type="password" placeholder="***************" />
+            </div>
+
+            <button onclick="onSubmitDetails()">Sign up now</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        function onSubmitDetails() {
+            var fullName = document.querySelector("#fullName").value;
+            var email = document.querySelector("#email").value;
+            var password = document.querySelector("#password").value;
+
+            localStorage.setItem('fullName', fullName);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+        }
+
+    </script>
+</body>
+
+</html>
